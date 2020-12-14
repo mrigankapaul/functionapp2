@@ -48,3 +48,11 @@ Azure Functions Pricing
         - Connect to external resources
         - Reduce amount of code
     
+
+
+
+    /// Operations /////
+
+    func version
+    func init // to create the project
+    func new // to create a new function based on a trigger type 
