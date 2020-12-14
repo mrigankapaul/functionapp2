@@ -1,0 +1,50 @@
+Azure Function = Event + Code
+    - Run a task in background
+    - New Data being available ( In a Queue or Blob Storage)
+    - HTTP Request
+Azure Functions
+    - Simplified Programming model
+    - Eliminate bolier plate code - like connecting to a topic of a queue
+    - Consumption based pricin model
+        - Pay as you go mode
+        - Only pay for what you use
+        - Automatic scaling
+Azure Functions Pricing
+     Run in App Service Plan 
+        - Existing pricing model
+        - Predictive monthly Cost
+        - No function duration cost
+     Or Consumption plan
+        - Limits function execution time to 5 mins
+        - Optional Daily max quota
+        Billing model 
+            - No of executions
+            - CPU (Time) * RAM (GB)
+        Free Tier
+            - 1,000,000 executions
+            - 400,000 GBs
+
+    Azure Premium Function Plan
+        - Vnet connectivity
+        - Improved performance
+    Azure Function Runtime is available as Docker Container
+
+    Serverless 
+        - Management and maintenance of the service could be delegated to 3rd Party
+        - Use Platform as a service (Cosmos DB or Auth0)
+    Function as a service (FaaS)
+    Function App 
+        - Group of related functions (that allow us to share configuration setting and resources)
+
+    Azure Function Use Cases
+        - Experiments and prototyping
+        - Automating development process
+        - Decomposing or extending monolithic applications
+        - Independent scaling 
+        - Adapaters for integrating systems.
+    Trigger Types -
+        - Timers, HTTP Requests, Queue Messsages, Blobs, Cosmos DB
+    Input and Output Bindings
+        - Connect to external resources
+        - Reduce amount of code
+    
