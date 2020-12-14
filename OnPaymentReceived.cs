@@ -15,12 +15,25 @@ namespace functionapp2
         [FunctionName("OnPaymentReceived")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+            [Queue("orders")] IAsyncCollector<Order> orderQueue,
             ILogger log)
         {
             log.LogInformation("Received a Payment");
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
+            var order = JsonConvert.DeserializeObject<Order>(requestBody);
+            await orderQueue.AddAsync(order);
+            log.LogInformation($"Order {order.OrderId} received from {order.Email} for product {order.ProductId}");
             return new OkObjectResult($"Thank You for your purchase");
         }
     }
+
+
+        public class Order
+    {
+        public string OrderId { get; set;}
+        public string ProductId { get; set;}
+        public string Email { get; set;}
+        public decimal Price { get; set; }
+    }
+
 }

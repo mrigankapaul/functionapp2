@@ -56,3 +56,4 @@ Azure Functions Pricing
     func version
     func init // to create the project
     func new // to create a new function based on a trigger type 
+    func host start
