@@ -51,7 +51,9 @@ Azure Functions Pricing
     You dont have to use bindings
     Bindings are provided for convinience
     
-
+   IBinder - customize any binding at runtime.
+    Works with all binding attributes. Calculate attribute parameters on-demand in the function body.
+Flexible to choose the type of binding at runtime.
 
 
     /// Operations /////
