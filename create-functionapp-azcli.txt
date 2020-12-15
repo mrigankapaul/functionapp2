@@ -1,0 +1,19 @@
+az functionapp -h
+az account set -s "subscription name"
+
+/// commands
+export resourceGroup="pluralsightfuncs"
+export location="canadacentral"
+az group create -n $resourceGroup -l $location
+export storageAccount="mrigankasa"
+az storage account create -n $storageAccount -l $location -g $resourceGroup --sku Standard_LRS
+echo '{"Application_Type":"web"}' > props.json
+export appInsights="pluralsightfuncs2019"
+az resource create -g $resourceGroup -n $appInsights --resource-type "Microsoft.Insights/components" --properties "@props.json"
+// function app creation when using consumption plan
+export functionAppName="pulralsightfuncs2019"
+az functionapp create --consumption-plan-location canadacentral --name pulralsightfuncs2019 --resource-group pluralsightfuncs --runtime dotnet --storage-account mrigankasa
+// for custom settings in app settings
+az functionapp config appsettings set \
+> -n $functionAppName -g $resourceGroup \
+> --settings "MySettings1=Hello" "MySettings2=World"

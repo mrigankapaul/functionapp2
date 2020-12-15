@@ -16,7 +16,7 @@ $location = "westeurope"
 az group create -n $resourceGroup -l $location
 
 # create a storage account
-$storageAccount = "pluralsightfuncs2019"
+$storageAccount = "pluralsightfuncs2019mp"
 az storage account create `
   -n $storageAccount `
   -l $location `
@@ -32,7 +32,7 @@ az resource create `
     --properties "@props.json"
 
 # create the function app
-$functionAppName = "pluralsightfuncs2019"
+$functionAppName = "pluralsightfuncs2019mp"
 az functionapp create `
     -n $functionAppName `
     -g $resourceGroup `
