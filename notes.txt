@@ -47,6 +47,9 @@ Azure Functions Pricing
     Input and Output Bindings
         - Connect to external resources
         - Reduce amount of code
+
+    You dont have to use bindings
+    Bindings are provided for convinience
     
 
 
