@@ -55,7 +55,30 @@ Azure Functions Pricing
     Works with all binding attributes. Calculate attribute parameters on-demand in the function body.
 Flexible to choose the type of binding at runtime.
 
+    //// Deploying Azure Functions ///
 
+    Infrastructure
+        - App Service Plan
+        - Storage Account
+        - Application Insights
+        - Function App
+    Create Infrastructure
+        - Azure Portal
+        - Visual Studio
+    Infrastructure as Code
+        - Azure CLI
+        - ARM Template
+
+    Publishing your code
+        - Visual Studio
+        - Portal
+    Automated Publsihing
+        - Publish zip with kudu
+        - "run From package"
+        - Git Reporsitory
+        - Azure Function core tool
+        - az cli
+        - Azure Devops pipleline has some built in capabilities to easily publish
     /// Operations /////
 
     func version
