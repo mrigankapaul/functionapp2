@@ -38,7 +38,7 @@
       "applicationInsightsName": "[parameters('appName')]",
       "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
       "storageAccountId": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-      "storageApiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]",
+      "storageApiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]"
     },
     "resources": [
       {

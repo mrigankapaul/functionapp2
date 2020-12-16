@@ -12,7 +12,7 @@ az account set -s "My Subscription Name"
 
 # create a resource group
 $resourceGroup = "pluralsightfuncs"
-$location = "westeurope"
+$location = "canadacentral"
 az group create -n $resourceGroup -l $location
 
 # create a storage account
@@ -44,5 +44,5 @@ az functionapp create `
 # how to set app settings
 az functionapp config appsettings set `
     -n $functionAppName -g $resourceGroup `
-    --settings "MySetting1=Hello" "MySetting2=World"
+    --settings "SendGridApiKey=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" "EmailSender=paul.mriganka@gmail.com"
 

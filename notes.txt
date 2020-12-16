@@ -79,6 +79,33 @@ Flexible to choose the type of binding at runtime.
         - Azure Function core tool
         - az cli
         - Azure Devops pipleline has some built in capabilities to easily publish
+
+    Cold Start
+    kusto query language
+
+    Authorization Levels
+        - Anonymous, Functions, Admin ( One code for all functions)
+    Function Level Authorization
+        - Specific code per function
+        - "code" query string parameter
+        - "x-functions-key" HTTP Header
+
+    Enable "Easy Auth" in Azure App Service Feature - Applies to entire Function App
+    Integrates with Azure AD, Google, facebook others
+    Redirects you to login page
+
+    Azure API Management - (Use security features of API management)
+    Azure Functions can integrate with other services -
+        - Azure Function Proxies (Redirect Incoming HTTP Requests) / Redirect to Blob storage with can have the JS files (SPA)
+        - Azue API Management Acts as a API Gateway - Routes to backend function API        Can add security (Verify API Keys, JWT Token or certificates)
+                                                        Can add caching layer, Usage Queotas, rate limiting
+        -                                           Servlerless Pricing tier
+        - Azue Key Vault                            Stores Secrets securly
+                                                    Access with a Managed Identity
+        - Azure Devops Pipelines                     Automate Function App Deployment
+        -                                            Deploy ARM templates
+        - Azure Event Grid                           Subscribe to any Axure resources and pass them to Function Applies
+                                                    eg - deployment completed
     /// Operations /////
 
     func version

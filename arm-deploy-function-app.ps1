@@ -1,10 +1,10 @@
 # create a resource group
 $resourceGroup = "pluralsightfuncsarm"
-$location = "westeurope"
+$location = "canadacentral"
 az group create -n $resourceGroup -l $location
 
 # choose a name for our function app
-$functionAppName = "pluralsightfuncsarm"
+$functionAppName = "pluralsightfuncsarm-mp"
 
 # to deploy our function app
 az group deployment create -g $resourceGroup --template-file azuredeploy.json `
